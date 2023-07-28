@@ -4,18 +4,45 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <title>学习</title>
-
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
 
     <noscript>
       <strong>We're sorry but doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app">姓名：</div>
-    <input class="right" />
-    <div>年龄：</div>
-    <input class="left" />
-    <button onclick="show()">提交</button>
+
+    <div id="app">
+      <div class="row">
+        <span class="title">姓名</span>
+        <input id="name" onblur="stuBlur(this)" onfocus="stuFocus(this)" />
+      </div>
+      <div class="row">
+        <span class="title">年龄</span>
+        <input id="age" onblur="stuBlur(this)" onfocus="stuFocus(this)" />
+      </div>
+      <div class="row">
+        <span class="title">备注</span>
+        <input id="remark" onblur="stuBlur(this)" onfocus="stuFocus(this)" />
+      </div>
+      <!-- <br /> -->
+      <div class="row">
+        <span class="title">性别</span>
+        <input class="sex" type="radio" name="sex" value="1"><label>男</label>
+        <input class="sex" type="radio" name="sex" value="2"><label></label>女
+      </div>
+      <div class="row">
+        <span class="title">城市</span>
+        <select name="citys">
+          <option value="cq">重庆</option>
+          <option value="cd">成都</option>
+          <option value="km">昆明</option>
+          <option value="xian">先</option>
+        </select>
+      </div>
+
+      <button onclick="show()">提交</button>
+    </div>
   </body>
   <script type="text/javascript" src="js/index.js"></script>
 </html>
